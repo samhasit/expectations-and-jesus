@@ -152,7 +152,7 @@
   if (!dialog || !questionCards.length) return;
 
   const questions = questionCards.map((card) => ({
-    question: card.querySelector("h3").textContent.trim(),
+    question: card.querySelector("h3").innerHTML.trim(),
     followUp: card.querySelector("p").textContent.trim()
   }));
   const count = document.getElementById("dialog-count");
@@ -169,7 +169,7 @@
   function renderQuestion() {
     const item = questions[current];
     count.textContent = `Question ${current + 1} of ${questions.length}`;
-    dialogQuestion.textContent = item.question;
+    dialogQuestion.innerHTML = item.question;
     dialogFollowUp.textContent = item.followUp;
     dialogFollowUp.hidden = true;
     followUpButton.setAttribute("aria-expanded", "false");

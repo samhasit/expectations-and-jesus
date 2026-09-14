@@ -1599,6 +1599,16 @@ button {
   opacity: 0.8;
 }
 
+.eyebrow .verse-link,
+.scene-card__label .verse-link {
+  text-decoration-color: currentColor;
+}
+
+.question-card h3 .verse-link,
+.dialog-question h2 .verse-link {
+  text-decoration-color: var(--blue);
+}
+
 .site-footer__links {
   display: flex;
   flex-wrap: wrap;
