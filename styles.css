@@ -1599,18 +1599,6 @@ button {
   opacity: 0.8;
 }
 
-.hero__leader {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  color: #c7cfdd;
-  font-size: 0.83rem;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--yellow);
-  text-underline-offset: 0.2em;
-}
-
 .site-footer__links {
   display: flex;
   flex-wrap: wrap;
@@ -1619,7 +1607,6 @@ button {
 
 .verse-link:focus-visible,
 .reference-strip a:focus-visible,
-.hero__leader:focus-visible,
 .leader-passages a:focus-visible,
 .site-footer a:focus-visible {
   outline: 3px solid var(--yellow);
@@ -1937,8 +1924,7 @@ button {
 }
 
 @media print {
-  .leader-bar,
-  .hero__leader {
+  .leader-bar {
     display: none !important;
   }
 

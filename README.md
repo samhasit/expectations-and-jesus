@@ -5,8 +5,8 @@ A mobile-first discussion companion built from themes in two Ten Minute Bible Ta
 ## Features
 
 - Seven-section discussion flow with a horizontally scrolling navigation bar
-- Every Scripture reference links to the passage on Bible.com (NIV)
-- A leader guide (`leader.html`) with minute marks, readings, transitions, a short version, and a stopwatch that highlights the current step
+- Every Scripture reference links to the passage on Bible.com (KJV)
+- An unlisted leader guide (`leader.html`, not linked from the main page) with minute marks, readings, transitions, a short version, and a stopwatch that highlights the current step
 - Interactive expectation audit
 - Expectation and revelation comparison
 - Guided reflection for unmet expectations
