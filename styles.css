@@ -1858,6 +1858,15 @@ button {
   margin: 2px 0 0;
 }
 
+.leader-scene {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.leader-scene strong {
+  color: var(--ink);
+}
+
 .leader-step dd .verse-link {
   font-weight: 700;
   text-decoration-color: var(--blue);
@@ -1917,6 +1926,7 @@ button {
   }
 
   .leader-step dd {
+    grid-column: 2;
     margin: 0;
   }
 }
