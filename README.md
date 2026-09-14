@@ -1,4 +1,4 @@
-# Are Your Expectations Keeping You from Jesus?
+# Expectations in the Bible
 
 A mobile-first discussion companion built from themes in two Ten Minute Bible Talks podcast episode transcripts. The guide centers on John 7:25–44 and John 12:12–19.
 
