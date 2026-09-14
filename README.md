@@ -5,6 +5,8 @@ A mobile-first discussion companion built from themes in two Ten Minute Bible Ta
 ## Features
 
 - Seven-section discussion flow with a horizontally scrolling navigation bar
+- Every Scripture reference links to the passage on Bible.com (NIV)
+- A leader guide (`leader.html`) with minute marks, readings, transitions, a short version, and a stopwatch that highlights the current step
 - Interactive expectation audit
 - Expectation and revelation comparison
 - Guided reflection for unmet expectations
@@ -20,7 +22,7 @@ The site uses plain HTML, CSS, and vanilla JavaScript. It requires no backend, d
 
 ## Local preview
 
-Open `index.html` directly, or serve this folder with a simple static server:
+Open `index.html` (or `leader.html` for the leader guide) directly, or serve this folder with a simple static server:
 
 ```powershell
 python -m http.server 8000
