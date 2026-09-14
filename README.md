@@ -16,6 +16,14 @@ A mobile-first discussion companion built from themes in two Ten Minute Bible Ta
 - Automatic light and dark mode
 - Keyboard support, visible focus states, reduced-motion support, and print styles
 
+## Keeping the leader guide in sync
+
+The leader guide embeds each section of the main page under "What the group sees". After editing `index.html` or the audit responses in `script.js`, run:
+
+```powershell
+python build-leader.py
+```
+
 ## Technology
 
 The site uses plain HTML, CSS, and vanilla JavaScript. It requires no backend, database, authentication, API keys, package installation, or build step.
