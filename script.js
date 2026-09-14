@@ -120,24 +120,25 @@
   });
 
   const surrenderResponse = document.querySelector(".surrender-response");
-  document.querySelectorAll("[data-surrender]").forEach((button) => {
+  const surrenderButtons = [...document.querySelectorAll(".surrender-item > button")];
+  surrenderButtons.forEach((button) => {
+    const question = button.parentElement.querySelector("p").textContent.trim();
     button.addEventListener("click", () => {
       const willOpen = button.getAttribute("aria-expanded") !== "true";
-      document.querySelectorAll("[data-surrender]").forEach((item) => {
-        item.setAttribute("aria-expanded", "false");
-      });
+      surrenderButtons.forEach((item) => item.setAttribute("aria-expanded", "false"));
       button.setAttribute("aria-expanded", String(willOpen));
       surrenderResponse.textContent = willOpen
-        ? button.dataset.surrender
+        ? question
         : "Start with the question that feels hardest to answer.";
     });
   });
 
   const questionCards = [...document.querySelectorAll("[data-question]")];
-  questionCards.forEach((card) => {
+  questionCards.forEach((card, index) => {
     const button = card.querySelector("button");
     const followUp = card.querySelector("p");
-    followUp.textContent = card.dataset.followup;
+    followUp.id = `followup-${index + 1}`;
+    button.setAttribute("aria-controls", followUp.id);
 
     button.addEventListener("click", () => {
       const willOpen = button.getAttribute("aria-expanded") !== "true";
@@ -152,7 +153,7 @@
 
   const questions = questionCards.map((card) => ({
     question: card.querySelector("h3").textContent.trim(),
-    followUp: card.dataset.followup
+    followUp: card.querySelector("p").textContent.trim()
   }));
   const count = document.getElementById("dialog-count");
   const dialogQuestion = document.getElementById("dialog-question");

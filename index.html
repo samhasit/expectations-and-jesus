@@ -12,6 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111827'/%3E%3Cpath d='M17 21h30M17 32h20M17 43h12' stroke='%23f5b942' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <noscript><style>.question-card > p[hidden], .surrender-item > p[hidden] { display: block; } .question-card button, .surrender-list button i, .surrender-response, [data-open-discussion] { display: none; }</style></noscript>
   </head>
   <body>
     <a class="skip-link" href="#two-scenes">Skip to the discussion</a>
@@ -22,7 +23,7 @@
         <h1>Are Your <span>Expectations</span> Keeping You from Jesus?</h1>
         <p class="hero__prompt">What happens when Jesus is faithful, but he does not do what we expected?</p>
 
-        <div class="passage-pair" aria-label="Primary passages">
+        <div class="passage-pair" role="group" aria-label="Primary passages">
           <article>
             <span>Scene one</span>
             <strong>John 7:25–44</strong>
@@ -76,10 +77,10 @@
           </article>
         </div>
 
-        <aside class="big-question">
+        <div class="big-question">
           <p>Discuss together</p>
           <h3>What did the crowds expect from Jesus, and how did those expectations prevent them from understanding him?</h3>
-        </aside>
+        </div>
       </section>
 
       <section class="content-section audit-section" id="expectation-audit" data-section>
@@ -91,7 +92,7 @@
           </header>
 
           <div class="audit-layout">
-            <div class="audit-options" aria-label="Common expectations">
+            <div class="audit-options" role="group" aria-label="Common expectations">
               <button class="audit-option" type="button" data-audit="comfort" aria-pressed="false">
                 <span>01</span>
                 <strong>Keep me comfortable</strong>
@@ -119,7 +120,7 @@
               </button>
             </div>
 
-            <aside class="audit-response" aria-live="polite">
+            <div class="audit-response" aria-live="polite">
               <p class="audit-response__label">Choose an expectation</p>
               <h3 id="audit-title">Tap one that feels familiar.</h3>
               <p id="audit-copy">This is not a score. It is a way to notice the story you may be telling yourself about what Jesus owes you.</p>
@@ -127,13 +128,13 @@
                 <span>A better question</span>
                 <p id="audit-question">What has Jesus actually promised?</p>
               </div>
-            </aside>
+            </div>
           </div>
 
-          <aside class="discussion-prompt">
+          <div class="discussion-prompt">
             <span>Talk about it</span>
             <p>Which expectation is easiest to disguise as mature faith?</p>
-          </aside>
+          </div>
         </div>
       </section>
 
@@ -144,7 +145,7 @@
           <p>In both passages, people see something true about Jesus but reduce his mission to categories they can already understand.</p>
         </header>
 
-        <div class="expectation-contrast" aria-label="Human expectations compared with what Jesus reveals">
+        <div class="expectation-contrast" role="group" aria-label="Human expectations compared with what Jesus reveals">
           <div class="contrast-heading">
             <p>We may expect</p>
             <p>Jesus reveals</p>
@@ -171,7 +172,7 @@
           </article>
         </div>
 
-        <div class="reference-strip" aria-label="Scripture references">
+        <div class="reference-strip" role="group" aria-label="Scripture references">
           <span>John 7:25–44</span>
           <span>John 12:12–19</span>
           <span>Zechariah 9:9–10</span>
@@ -182,10 +183,10 @@
           <p>Jesus does not offer a better version of the life we scripted. He offers himself, and a kingdom larger than our script.</p>
         </blockquote>
 
-        <aside class="big-question big-question--yellow">
+        <div class="big-question big-question--yellow">
           <p>Discuss together</p>
           <h3>Why do you think humility, suffering, and the cross were so hard to recognize as victory?</h3>
-        </aside>
+        </div>
       </section>
 
       <section class="content-section disappointment-section" id="disappointment" data-section>
@@ -219,15 +220,15 @@
             </article>
           </div>
 
-          <aside class="nuance-card">
+          <div class="nuance-card">
             <p class="nuance-card__title">Hold this carefully</p>
             <p>Jesus cares deeply about physical suffering, injustice, hunger, grief, and oppression. The deeper rescue he brings does not make those wounds trivial. It means our circumstances, however painful, do not have the final word about his love or our future.</p>
-          </aside>
+          </div>
 
-          <aside class="big-question big-question--outline">
+          <div class="big-question big-question--outline">
             <p>Discuss together</p>
             <h3>What do your emotions toward God reveal about what you expect from him?</h3>
-          </aside>
+          </div>
         </div>
       </section>
 
@@ -244,7 +245,7 @@
             <p>Jesus meets our deepest need by bringing us to God, forgiving sin, making us alive, giving his Spirit, and securing resurrection life. His presence can sustain us before a circumstance changes, after it changes, or when it does not change at all.</p>
           </div>
 
-          <div class="promise-stack" aria-label="Promises to remember">
+          <div class="promise-stack" role="group" aria-label="Promises to remember">
             <p class="promise-stack__label">What is already true in Christ?</p>
             <div><span>01</span><p>You are deeply loved.</p></div>
             <div><span>02</span><p>Your sins can be forgiven.</p></div>
@@ -255,7 +256,7 @@
           </div>
         </div>
 
-        <div class="reference-strip" aria-label="Scripture references">
+        <div class="reference-strip" role="group" aria-label="Scripture references">
           <span>John 7:37–39</span>
           <span>Isaiah 58:11</span>
           <span>Colossians 2:9–15</span>
@@ -268,21 +269,36 @@
             <p>Tap each question. Nothing is saved or submitted.</p>
           </header>
           <div class="surrender-list">
-            <button type="button" aria-expanded="false" data-surrender="What outcome did I expect, and what did it represent to me?">
+            <div class="surrender-item">
+              <button type="button" aria-expanded="false">
               <span>01</span><strong>What did I expect?</strong><small>Name the outcome clearly.</small><i aria-hidden="true">+</i>
             </button>
-            <button type="button" aria-expanded="false" data-surrender="Can I find this exact outcome in Jesus’ promises, or did I infer it from what I hoped faith would produce?">
+              <p hidden>What outcome did I expect, and what did it represent to me?</p>
+            </div>
+            <div class="surrender-item">
+              <button type="button" aria-expanded="false">
               <span>02</span><strong>Was it promised?</strong><small>Separate desire from promise.</small><i aria-hidden="true">+</i>
             </button>
-            <button type="button" aria-expanded="false" data-surrender="What uncertainty, vulnerability, or pain am I trying to avoid controlling?">
+              <p hidden>Can I find this exact outcome in Jesus’ promises, or did I infer it from what I hoped faith would produce?</p>
+            </div>
+            <div class="surrender-item">
+              <button type="button" aria-expanded="false">
               <span>03</span><strong>What am I trying to control?</strong><small>Look beneath the demand.</small><i aria-hidden="true">+</i>
             </button>
-            <button type="button" aria-expanded="false" data-surrender="What is already true because of Jesus, even if this situation remains unresolved?">
+              <p hidden>What uncertainty, vulnerability, or pain am I trying to avoid controlling?</p>
+            </div>
+            <div class="surrender-item">
+              <button type="button" aria-expanded="false">
               <span>04</span><strong>What is already true?</strong><small>Return to the gospel.</small><i aria-hidden="true">+</i>
             </button>
-            <button type="button" aria-expanded="false" data-surrender="What would trust, obedience, honesty, or love look like in the next small step?">
+              <p hidden>What is already true because of Jesus, even if this situation remains unresolved?</p>
+            </div>
+            <div class="surrender-item">
+              <button type="button" aria-expanded="false">
               <span>05</span><strong>What is my faithful next step?</strong><small>Move without demanding certainty.</small><i aria-hidden="true">+</i>
             </button>
+              <p hidden>What would trust, obedience, honesty, or love look like in the next small step?</p>
+            </div>
           </div>
           <p class="surrender-response" aria-live="polite">Start with the question that feels hardest to answer.</p>
         </div>
@@ -300,65 +316,65 @@
           </header>
 
           <div class="question-list">
-            <article class="question-card" data-question data-followup="How might that expectation shape the way you interpret prayer, success, or suffering?">
+            <article class="question-card" data-question>
               <span>01</span>
               <h3>What expectation of Jesus is easiest to hold without realizing it?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>How might that expectation shape the way you interpret prayer, success, or suffering?</p>
             </article>
-            <article class="question-card" data-question data-followup="What is the difference between knowing a true statement about Jesus and actually allowing that truth to redefine your hopes?">
+            <article class="question-card" data-question>
               <span>02</span>
               <h3>Can correct theology coexist with distorted expectations?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>What is the difference between knowing a true statement about Jesus and actually allowing that truth to redefine your hopes?</p>
             </article>
-            <article class="question-card" data-question data-followup="Where do confidence, familiarity, or incomplete biblical knowledge make us less curious about who Jesus really is?">
+            <article class="question-card" data-question>
               <span>03</span>
               <h3>What does the crowd in John 7 think it knows, and what does it miss?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>Where do confidence, familiarity, or incomplete biblical knowledge make us less curious about who Jesus really is?</p>
             </article>
-            <article class="question-card" data-question data-followup="How does the donkey challenge ordinary ideas about power, leadership, and victory?">
+            <article class="question-card" data-question>
               <span>04</span>
               <h3>Why does Jesus enter Jerusalem as a humble King?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>How does the donkey challenge ordinary ideas about power, leadership, and victory?</p>
             </article>
-            <article class="question-card" data-question data-followup="Do you tend to conclude that God is distant, displeased, powerless, or simply late? What feeds that conclusion?">
+            <article class="question-card" data-question>
               <span>05</span>
               <h3>When prayer seems unanswered, what story do you tell yourself about God?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>Do you tend to conclude that God is distant, displeased, powerless, or simply late? What feeds that conclusion?</p>
             </article>
-            <article class="question-card" data-question data-followup="How can we ask boldly for help while remaining open to a form of faithfulness we did not predict?">
+            <article class="question-card" data-question>
               <span>06</span>
               <h3>What is the difference between asking Jesus for help and reducing him to a problem solver?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>How can we ask boldly for help while remaining open to a form of faithfulness we did not predict?</p>
             </article>
-            <article class="question-card" data-question data-followup="Which expectations only become visible when something important is delayed, denied, or taken away?">
+            <article class="question-card" data-question>
               <span>07</span>
               <h3>How can suffering expose what we expected from Jesus?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>Which expectations only become visible when something important is delayed, denied, or taken away?</p>
             </article>
-            <article class="question-card" data-question data-followup="What makes a future promise feel less concrete than a present circumstance, and how might the church help?">
+            <article class="question-card" data-question>
               <span>08</span>
               <h3>Why can immediate relief feel more compelling than resurrection hope?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>What makes a future promise feel less concrete than a present circumstance, and how might the church help?</p>
             </article>
-            <article class="question-card" data-question data-followup="What practices help you receive strength from God’s presence instead of waiting for circumstances to supply it?">
+            <article class="question-card" data-question>
               <span>09</span>
               <h3>How does the promise of living water change the way we face disappointment?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>What practices help you receive strength from God’s presence instead of waiting for circumstances to supply it?</p>
             </article>
-            <article class="question-card" data-question data-followup="What would it look like to release that expectation without pretending the desire itself does not matter?">
+            <article class="question-card" data-question>
               <span>10</span>
               <h3>What expectation might Jesus be asking you to surrender?</h3>
               <button type="button" aria-expanded="false">Show follow-up <i aria-hidden="true">+</i></button>
-              <p hidden></p>
+              <p hidden>What would it look like to release that expectation without pretending the desire itself does not matter?</p>
             </article>
           </div>
         </div>
@@ -390,10 +406,10 @@
             </div>
           </div>
 
-          <aside class="final-question">
+          <div class="final-question">
             <p>One last question</p>
             <h3>Do you want Jesus himself, or mainly the life you hoped he would provide?</h3>
-          </aside>
+          </div>
 
           <div class="source-section">
             <div>
@@ -442,7 +458,7 @@
         <div class="dialog-question">
           <p>Talk about it</p>
           <h2 id="dialog-question" tabindex="-1"></h2>
-          <button type="button" class="dialog-followup" aria-expanded="false">Show a deeper follow-up <i aria-hidden="true">+</i></button>
+          <button type="button" class="dialog-followup" aria-expanded="false" aria-controls="dialog-followup">Show a deeper follow-up <i aria-hidden="true">+</i></button>
           <p id="dialog-followup" hidden></p>
         </div>
         <footer>
