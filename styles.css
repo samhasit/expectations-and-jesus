@@ -1797,17 +1797,27 @@ button {
 }
 
 .leader-step {
+  --accent: var(--step-accent);
   padding: 20px 18px;
   border: 1px solid var(--line);
-  border-left-width: 5px;
+  border-left: 6px solid var(--accent);
   border-radius: 15px;
   background: var(--card);
+  background: color-mix(in srgb, var(--accent) 7%, var(--card));
   scroll-margin-top: 130px;
 }
 
+.leader-step:nth-child(1) { --step-accent: #3e5ec9; --step-accent-dark: #8ca7ff; }
+.leader-step:nth-child(2) { --step-accent: #0f766e; --step-accent-dark: #5eead4; }
+.leader-step:nth-child(3) { --step-accent: #b45309; --step-accent-dark: #fbbf24; }
+.leader-step:nth-child(4) { --step-accent: #6d28d9; --step-accent-dark: #c4b5fd; }
+.leader-step:nth-child(5) { --step-accent: #be123c; --step-accent-dark: #fda4af; }
+.leader-step:nth-child(6) { --step-accent: #0369a1; --step-accent-dark: #7dd3fc; }
+.leader-step:nth-child(7) { --step-accent: #15803d; --step-accent-dark: #86efac; }
+.leader-step:nth-child(8) { --step-accent: #9d174d; --step-accent-dark: #f9a8d4; }
+
 .leader-step[aria-current="step"] {
-  border-color: var(--yellow);
-  box-shadow: 0 0 0 3px var(--yellow-soft);
+  box-shadow: 0 0 0 3px var(--yellow);
 }
 
 .leader-step__head {
@@ -1819,7 +1829,7 @@ button {
 }
 
 .leader-step__time {
-  color: var(--blue);
+  color: var(--accent);
   font-size: 0.74rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
@@ -1847,7 +1857,7 @@ button {
 }
 
 .leader-step dt {
-  color: var(--blue);
+  color: var(--accent);
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.09em;
@@ -1869,7 +1879,18 @@ button {
 
 .leader-step dd .verse-link {
   font-weight: 700;
-  text-decoration-color: var(--blue);
+  text-decoration-color: var(--accent);
+}
+
+.leader-bar__now::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--now-accent, var(--line));
+  vertical-align: 0;
 }
 
 .leader-panel--short {
@@ -1940,6 +1961,11 @@ button {
 @media (prefers-color-scheme: dark) {
   .leader-panel--short {
     background: #090f1b;
+  }
+
+  .leader-step {
+    --accent: var(--step-accent-dark);
+    background: color-mix(in srgb, var(--accent) 10%, var(--card));
   }
 }
 

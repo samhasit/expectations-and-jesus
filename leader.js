@@ -41,8 +41,10 @@
       if (step) {
         step.setAttribute("aria-current", "step");
         now.textContent = `Now: ${step.querySelector("h3").textContent}`;
+        now.style.setProperty("--now-accent", getComputedStyle(step).getPropertyValue("--accent"));
       } else if (minutes >= 45) {
         now.textContent = "Past 45 minutes. Land the plane.";
+        now.style.setProperty("--now-accent", "var(--yellow)");
       }
     }
   }
@@ -77,6 +79,7 @@
     toggle.setAttribute("aria-pressed", "false");
     clock.textContent = "00:00";
     now.textContent = "Press start when you begin.";
+    now.style.removeProperty("--now-accent");
   });
 
   document.addEventListener("visibilitychange", () => {
